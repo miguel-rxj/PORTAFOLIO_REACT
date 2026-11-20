@@ -67,7 +67,7 @@ function Hero() {
 
             <div className="hero__photo">
               {PHOTO_SRC ? (
-                <img src={PHOTO_SRC} alt="Foto de Miguel" />
+              <img src={PHOTO_SRC} alt="Foto de Miguel" width="340" height="425" fetchPriority="high" />
               ) : (
                 <span className="mono">Tu foto</span>
               )}
@@ -92,19 +92,24 @@ function Hero() {
         <div className="hero__stack">
           <p className="hero__stack-label mono">Tecnologías que uso</p>
 
-          <ul className="hero__stack-list">
-            {technologies.map((tech) => (
-              <li key={tech.name} className="tech" title={tech.name}>
-                {tech.icon ? (
-                  <img src={tech.icon} alt={tech.name} />
-                ) : (
-                  <span className="tech__placeholder mono">
-                    {tech.name.slice(0, 2)}
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
+          <div className="hero__stack-marquee" role="region" aria-label="Tecnologías que uso">
+            <div className="hero__stack-track">
+              <ul className="hero__stack-list">
+                {technologies.map((tech) => (
+                  <li key={tech.name} className="tech">
+                    <img src={tech.icon} alt="" aria-hidden="true" width="30" height="30" />
+                  </li>
+                ))}
+              </ul>
+              <ul className="hero__stack-list" aria-hidden="true">
+                {technologies.map((tech) => (
+                  <li key={tech.name} className="tech">
+                    <img src={tech.icon} alt="" width="30" height="30" />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>

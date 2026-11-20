@@ -21,10 +21,10 @@ function Projects() {
             </ul>
 
             <div className="card__actions">
-              <a href={project.demo} target="_blank" rel="noreferrer" className="btn btn--primary btn--sm">
+              <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">
                 Ver demo
               </a>
-              <a href={project.repo} target="_blank" rel="noreferrer" className="btn btn--ghost btn--sm">
+              <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn btn--ghost btn--sm">
                 Código
               </a>
             </div>

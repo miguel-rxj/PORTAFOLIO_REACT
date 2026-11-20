@@ -7,10 +7,26 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencias y build
 node_modules
 dist
 dist-ssr
 *.local
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Caché de herramientas
+.eslintcache
+
+# Skills y configuración local de agentes
+.agents/
+skills-lock.json
+
+# Notas locales
+src/assets/importante.txt
 
 # Editor directories and files
 .vscode/*

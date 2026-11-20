@@ -1,7 +1,7 @@
 const enlaces = [
   { etiqueta: 'Email', valor: 'miguelmcsft@gmail.com', href: 'mailto:miguelmcsft@gmail.com' },
-  { etiqueta: 'LinkedIn', valor: '/in/miguel-21-rxj/', href: 'https://www.linkedin.com/in/miguel-21-rxj/' },
-  { etiqueta: 'GitHub', valor: 'miguel-rxj', href: 'https://github.com/miguel-rxj' },
+  { etiqueta: 'LinkedIn', valor: '/in/miguel-21-rxj/', href: 'https://www.linkedin.com/in/miguel-21-rxj/', external: true },
+  { etiqueta: 'GitHub', valor: 'miguel-rxj', href: 'https://github.com/miguel-rxj', external: true },
 ]
 
 function Contact() {
@@ -20,8 +20,8 @@ function Contact() {
           <a
             key={enlace.etiqueta}
             href={enlace.href}
-            target="_blank"
-            rel="noreferrer"
+            target={enlace.external ? '_blank' : undefined}
+            rel={enlace.external ? 'noopener noreferrer' : undefined}
             className="card card--hover contact__item"
           >
             <span className="contact__label mono">{enlace.etiqueta}</span>

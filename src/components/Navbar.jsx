@@ -2,7 +2,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar__inner">
-        <a href="#inicio" className="navbar__logo">Miguel Dev</a>
+        <a href="#inicio" className="navbar__logo" aria-label="Miguel Dev, inicio">Miguel Dev</a>
 
         <nav className="navbar__links" aria-label="Principal">
           <a href="#sobre-mi">Sobre mí</a>
